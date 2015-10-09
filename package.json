@@ -1,7 +1,7 @@
 {
   "name": "console-panel",
   "main": "./lib/console",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Read only log console panel",
   "keywords": [
   ],
@@ -9,7 +9,7 @@
     "atom-space-pen-views": "^2.0.3",
     "event-kit": "^1.0.0"
   },
-  "repository": "https://github.com/spark/atom-console",
+  "repository": "https://github.com/spark/console-panel",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
