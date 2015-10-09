@@ -1,0 +1,64 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+#atom-console {
+	&.view-resizer {
+		overflow: hidden;
+		cursor: default;
+		-webkit-user-select: none;
+
+		.view-resize-handle {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			height: 10px;
+			width: 100%;
+			cursor: row-resize;
+			z-index: 3;
+		}
+	}
+
+	.view-scroller {
+		height: 100%;
+		width: 100%;
+		overflow: auto;
+	}
+
+	.panel-body {
+		height: 300px;
+		background-color: @inset-panel-background-color;
+
+		&.closed {
+			height: 0px !important;
+		}
+
+		pre {
+			&:empty {
+				padding: 0;
+			}
+		}
+
+		p {
+			margin: 0;
+
+			&.level-error {
+				color: @text-color-error;
+			}
+
+			&.level-warn {
+				color: @text-color-warning;
+			}
+
+			&.level-notice {
+				color: @text-color-info;
+			}
+
+			&.level-debug {
+				color: @text-color-subtle;
+			}
+		}
+	}
+}
