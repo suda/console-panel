@@ -61,4 +61,3 @@ Clears whole console.
 * Add level filtering
 * Show timestamp
 * "Go to latest" button
-* Ability to select and copy text

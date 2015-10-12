@@ -10,7 +10,7 @@ class ConsoleView extends View
       @div class: 'panel-heading', dblclick: 'toggle', outlet: 'heading', 'Console', =>
         @button class: 'btn pull-right', click: 'clear', 'Clear'
       @div class: 'panel-body closed view-scroller', outlet: 'body', =>
-        @pre outlet: 'output'
+        @pre class: 'native-key-bindings', outlet: 'output', tabindex: -1
 
   initialize: (serializeState) ->
     {$, $$} = require 'atom-space-pen-views'
