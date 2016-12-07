@@ -6,8 +6,8 @@ module.exports = Console =
   consoleView: null
   subscriptions: null
 
-  activate: (state) ->
-    @consoleView = new ConsoleView(state.consoleViewState)
+  activate: () ->
+    @consoleView = new ConsoleView()
     @consoleManager = new ConsoleManager(@consoleView)
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
@@ -20,9 +20,6 @@ module.exports = Console =
   deactivate: ->
     @subscriptions.dispose()
     @consoleView.destroy()
-
-  serialize: ->
-    consoleViewState: @consoleView.serialize()
 
   provideConsolePanel: ->
     @consoleManager
