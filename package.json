@@ -20,5 +20,12 @@
         "1.0.0": "provideConsolePanel"
       }
     }
+  },
+  "consumedServices": {
+    "tool-bar": {
+      "versions": {
+        "^0 || ^1": "consumeToolBar"
+      }
+    }
   }
 }

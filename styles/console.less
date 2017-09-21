@@ -5,22 +5,6 @@
 @import "ui-variables";
 
 #atom-console {
-	&.view-resizer {
-		overflow: hidden;
-		cursor: default;
-		-webkit-user-select: none;
-
-		.view-resize-handle {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			height: 10px;
-			width: 100%;
-			cursor: row-resize;
-			z-index: 3;
-		}
-	}
-
 	.view-scroller {
 		height: 100%;
 		width: 100%;
@@ -28,7 +12,7 @@
 	}
 
 	.panel-body {
-		height: 300px;
+		height: 100%;
 		background-color: @inset-panel-background-color;
 		cursor: text;
 		-webkit-user-select: text;
@@ -41,6 +25,7 @@
 			&:empty {
 				padding: 0;
 			}
+			overflow: visible;
 		}
 
 		p {
