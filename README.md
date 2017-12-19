@@ -6,7 +6,7 @@
 
 ## Usage
 
-By itself package doesn't do anything but it provides a service other packages can consume:
+By itself, the package doesn't do anything but it provides a service other packages can consume:
 
 `package.json`
 ```json
@@ -29,13 +29,13 @@ log: (message) ->
 
 ## API reference
 
-When consuming console panel you'll get instance of `ConsoleManager` which has following methods:
+When consuming console panel you'll get an instance of `ConsoleManager` which has the following methods:
 
 ###### toggle()
-Toggles console panel.
+Toggles the console panel.
 
 ###### log(message, level='info')
-Logs a message. `message` can be `String` or a custom `View` that will be appended.
+Logs a message. `message` can be a `String` or a custom `View` that will be appended.
 
 ###### error(message)
 Logs an error.
@@ -53,7 +53,7 @@ Logs an debug message.
 Logs a raw message. `rawText` will be split by `lineEnding` and each line will be added separately as `level`.
 
 ###### clear()
-Clears whole console.
+Clears the whole console.
 
 ## TODO
 
