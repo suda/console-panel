@@ -2,7 +2,7 @@
 
 **This isn't a terminal**. It's only a log console. Great for showing compilation output, long responses or general logs.
 
-![Screenshot](https://github.com/spark/console-panel/raw/master/resources/screenshot.png)
+![Screenshot](https://github.com/particle-iot/console-panel/raw/master/resources/screenshot.png)
 
 ## Usage
 

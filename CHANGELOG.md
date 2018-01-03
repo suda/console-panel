@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.2.1 - 2016-12-07
 ### Fixed
- - [Compatibility with Atom 1.12](https://github.com/spark/console-panel/issues/3)
+ - [Compatibility with Atom 1.12](https://github.com/particle-iot/console-panel/issues/3)
 
 ## 0.2.0 - 2015-10-12
 ### Added
