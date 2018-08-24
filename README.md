@@ -36,7 +36,6 @@ Toggles the console panel.
 
 ###### log(message, level='info')
 Logs a message. `message` can be a `String` or a custom `View` that will be appended.
-When toggle is set to true, the console will be shown.
 
 ###### error(message)
 Logs an error.
