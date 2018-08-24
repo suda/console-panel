@@ -54,7 +54,6 @@ Logs a raw message. `rawText` will be split by `lineEnding` and each line will b
 
 ###### clear()
 Clears the whole console.
-When toggle is set to true, the console will be hidden.
 
 ###### stickBottom()
 Stick to the bottom of the console panel (default).
