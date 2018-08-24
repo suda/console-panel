@@ -55,6 +55,12 @@ Logs a raw message. `rawText` will be split by `lineEnding` and each line will b
 ###### clear()
 Clears the whole console.
 
+###### stickBottom()
+Stick to the bottom of the console panel (default).
+
+###### stickTop()
+Stick to the top of the console panel.
+
 ## TODO
 
 * Write specs
