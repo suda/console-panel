@@ -1,5 +1,5 @@
 {
-  "Show": {
+  "show": {
     "description": "Show console panel when logs are added",
     "type": "boolean",
     "default": true
