@@ -63,9 +63,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "npm run eslint"
-    ],
+    "*.js": "npm run eslint",
     "*.less": "npm run stylelint"
   }
 }
