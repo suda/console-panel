@@ -1,9 +1,7 @@
-'use babel';
+import { CompositeDisposable } from 'atom';
+import ConsoleManager from './console-manager';
+import ConsoleView from './console-view';
 import packageConfig from './config/config-schema.json'
-
-let ConsoleView = null;
-let ConsoleManager = null;
-let CompositeDisposable = null;
 
 export default {
 	config: packageConfig,
@@ -12,10 +10,6 @@ export default {
 	subscriptions: null,
 
 	activate() {
-		ConsoleView = require('./console-view');
-		ConsoleManager = require('./console-manager');
-		({ CompositeDisposable } = require('atom'));
-
 		this.consoleView = new ConsoleView();
 		this.consoleManager = new ConsoleManager(this.consoleView);
 
