@@ -27,5 +27,13 @@
         "^0 || ^1": "consumeToolBar"
       }
     }
-  }
+  },
+  "activationCommands": {
+    "atom-workspace": [
+      "console:toggle"
+    ]
+  },
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ]
 }
