@@ -24,8 +24,7 @@ export default class ConsoleManager {
   }
 
 	// Log message with default level
-	log(message, level) {
-		if (level === null) { level = 'info'; }
+	log(message, level = 'info') {
 		this.view.log(message, level);
 	}
 
