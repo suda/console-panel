@@ -35,9 +35,10 @@
   "scripts": {
     "build": "rollup --config",
     "clean": "rimraf ./lib",
-    "lint": "eslint --cache --fix",
+    "eslint": "eslint --cache --fix",
     "prepublishOnly": "npm run clean && npm run build",
-    "start": "rollup --watch --config"
+    "start": "rollup --watch --config",
+    "stylelint": "stylelint --fix"
   },
   "dependencies": {
     "atom-space-pen-views": "^2.2.0",
@@ -63,9 +64,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint",
-      "eslint --cache --fix"
+      "npm run eslint"
     ],
-    "*.less": "stylelint --fix"
+    "*.less": "npm run stylelint"
   }
 }
