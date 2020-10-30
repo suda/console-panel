@@ -1,7 +1,7 @@
 import { CompositeDisposable } from 'atom';
 import ConsoleManager from './console-manager';
 import ConsoleView from './console-view';
-import packageConfig from './config/config-schema.json'
+import packageConfig from './config/config-schema.json';
 
 export default {
 	config: packageConfig,
