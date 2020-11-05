@@ -4,50 +4,49 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-
-
 #atom-console {
-	.view-scroller {
-		height: 100%;
-		width: 100%;
-		overflow: auto;
-	}
-  
-	.panel-body {
-		height: 100%;
-		background-color: @inset-panel-background-color;
-		cursor: text;
-		-webkit-user-select: text;
+  .view-scroller {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
 
-		&.closed {
-			height: 0px !important;
-		}
+  .panel-body {
+    height: 100%;
+    background-color: @inset-panel-background-color;
+    cursor: text;
+    -webkit-user-select: text;
 
-		pre {
-			&:empty {
-				padding: 0;
-			}
-			overflow: visible;
-		}
+    &.closed {
+      height: 0 !important;
+    }
 
-		p {
-			margin: 0;
+    pre {
+      &:empty {
+        padding: 0;
+      }
 
-			&.level-error {
-				color: @text-color-error;
-			}
+      overflow: visible;
+    }
 
-			&.level-warn {
-				color: @text-color-warning;
-			}
+    p {
+      margin: 0;
 
-			&.level-notice {
-				color: @text-color-info;
-			}
+      &.level-error {
+        color: @text-color-error;
+      }
 
-			&.level-debug {
-				color: @text-color-subtle;
-			}
-		}
-	}
+      &.level-warn {
+        color: @text-color-warning;
+      }
+
+      &.level-notice {
+        color: @text-color-info;
+      }
+
+      &.level-debug {
+        color: @text-color-subtle;
+      }
+    }
+  }
 }

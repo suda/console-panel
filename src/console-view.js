@@ -1,9 +1,4 @@
-'use babel';
-
-const {View} = require('atom-space-pen-views');
-let $ = null;
-let $$ = null;
-let packageName = null;
+import {$$, View} from 'atom-space-pen-views';
 
 export default class ConsoleView extends View {
 	static content() {
@@ -14,17 +9,9 @@ export default class ConsoleView extends View {
 		});
 	}
 
-	initialize(serializeState) {
-		({$, $$} = require('atom-space-pen-views'));
-		({packageName} = require('./util/package-helper'));
-	}
-
-	// Returns an object that can be retrieved when package is activated
-	serialize() {}
-
 	// Tear down any state and detach
 	destroy() {
-		if (this.disposables != null) {
+		if (this.disposables !== null) {
 			this.disposables.dispose();
 		}
 	}
@@ -75,7 +62,7 @@ export default class ConsoleView extends View {
 		} else if (this.stickTop) {
       this.body.scrollTop(0);
     }
-		if(atom.config.get('console-panel.show') == true ){			
+		if(atom.config.get('console-panel.show') === true ){			
 			this.show();
 		}
 	}
@@ -84,4 +71,4 @@ export default class ConsoleView extends View {
 		this.output.empty();
 		this.hide();
 	}
-};
+}

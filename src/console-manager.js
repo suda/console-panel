@@ -1,12 +1,8 @@
-'use babel';
-
-let Emitter = null;
+import {Emitter} from 'event-kit';
 
 export default class ConsoleManager {
 	constructor(view) {
 		this.view = view;
-		({Emitter} = require('event-kit'));
-
 		this.emitter = new Emitter;
 	}
 
@@ -28,8 +24,7 @@ export default class ConsoleManager {
   }
 
 	// Log message with default level
-	log(message, level) {
-		if (level == null) { level = 'info'; }
+	log(message, level = 'info') {
 		this.view.log(message, level);
 	}
 
@@ -55,10 +50,10 @@ export default class ConsoleManager {
 
 	// Log raw text
 	raw(rawText, level, lineEnding) {
-		if (level == null) {
+		if (level === null) {
 			level = 'info';
 		}
-		if (lineEnding == null) {
+		if (lineEnding === null) {
 			lineEnding = "\n";
 		}
 		rawText.split(lineEnding).forEach((line) => {
@@ -70,4 +65,4 @@ export default class ConsoleManager {
 	clear() {
 		this.view.clear();
 	}
-};
+}
