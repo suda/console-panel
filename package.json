@@ -45,6 +45,9 @@
     "event-kit": "^2.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/preset-env": "^7.12.10",
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "babel-eslint": "^10.1.0",
@@ -55,6 +58,7 @@
     "lint-staged": "^10.5.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.32.1",
+    "rollup-plugin-babel": "^4.4.0",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0"
   },
