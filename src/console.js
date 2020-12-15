@@ -25,7 +25,7 @@ export default {
 	},
 
 	deactivate() {
-		this.subscriptions.dispose();
+		this.subscriptions?.dispose();
 		this.consoleView?.destroy();
 	},
 

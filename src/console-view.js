@@ -11,9 +11,7 @@ export default class ConsoleView extends View {
 
 	// Tear down any state and detach
 	destroy() {
-		if (this.disposables !== null) {
-			this.disposables.dispose();
-		}
+		this.disposables?.dispose();
 	}
 
 	getTitle() {
