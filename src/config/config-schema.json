@@ -2,6 +2,13 @@
   "show": {
     "description": "Show console panel when logs are added",
     "type": "boolean",
-    "default": true
+    "default": true,
+    "order": 1
+  },
+  "addToToolbar": {
+    "description": "Add console panel button to `tool-bar`, if installed",
+    "type": "boolean",
+    "default": true,
+    "order": 2
   }
 }

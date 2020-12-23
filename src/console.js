@@ -36,12 +36,14 @@ export default {
 	consumeToolBar(toolBar) {
 		this.toolBar = toolBar('console-tool-bar');
 
-		this.toolBar.addButton({
-			icon: 'align-left',
-			iconset: 'fi',
-			tooltip: 'Toggle Console',
-			callback: 'console:toggle',
-			priority: 600
-		});
+		if(atom.config.get('console-panel.addToToolbar') === true ){
+			this.toolBar.addButton({
+				icon: 'align-left',
+				iconset: 'fi',
+				tooltip: 'Toggle Console',
+				callback: 'console:toggle',
+				priority: 600
+			});
+		}
 	}
 };
