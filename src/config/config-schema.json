@@ -6,7 +6,7 @@
     "order": 1
   },
   "addToToolbar": {
-    "description": "Add console panel button tool-bar, if installed",
+    "description": "Add console panel button to `tool-bar`, if installed",
     "type": "boolean",
     "default": true,
     "order": 2
