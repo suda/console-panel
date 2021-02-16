@@ -35,10 +35,13 @@
   "scripts": {
     "build": "rollup --config",
     "clean": "rimraf ./lib",
-    "eslint": "eslint --cache --fix",
+    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint:md": "remark . --quiet --frail --ignore-path .gitignore",
+    "lint:less": "stylelint",
+    "lint": "npm-run-all --parallel lint:*",
+    "format": "prettier . --write",
     "prepublishOnly": "npm run clean && npm run build",
-    "start": "rollup --watch --config",
-    "stylelint": "stylelint --fix"
+    "start": "rollup --watch --config"
   },
   "dependencies": {
     "atom-space-pen-views": "^2.2.0",
@@ -53,10 +56,25 @@
     "eslint-plugin-json": "^2.1.2",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "remark": "^13.0.0",
+    "remark-lint": "^8.0.0",
+    "remark-preset-prettier": "^0.4.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.32.1",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-lint-recommended",
+      "remark-preset-prettier"
+    ]
   },
   "husky": {
     "hooks": {
@@ -64,7 +82,8 @@
     }
   },
   "lint-staged": {
-    "*.js": "npm run eslint",
-    "*.less": "npm run stylelint"
+    "*.js": "eslint --cache --fix",
+    "*.{js,md,yml}": "prettier --write",
+    "*.less": "stylelint --cache --fix"
   }
 }
