@@ -25,7 +25,7 @@ export default class ConsoleView extends View {
 	}
 
 	getUri() {
-		return `particle-dev://editor/${this.getPath()}`;
+		return `atom://console-panel/${this.getPath()}`;
 	}
 
 	getDefaultLocation() {
